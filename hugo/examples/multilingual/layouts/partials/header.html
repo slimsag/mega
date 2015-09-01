@@ -1,0 +1,21 @@
+<header>
+	<nav id="language-menu">
+		<a href="/home">English</a>
+		<a href="/kodu">Eesti</a>
+	</nav>
+
+	{{ if (eq .Params.lang "et") }}
+	<h1 id="title">Minu mitmekeelne leht</h1>
+	{{ else }}
+	<h1 id="title">My multilingual site</h1>
+	{{ end }}
+
+	<nav id="main-menu">
+		{{ range (index .Site.Taxonomies.menu .Params.lang).Pages }}
+		<a href="{{ .Permalink  }}">{{ .LinkTitle }}</a>
+		{{ end }}
+		<div class="clear"></div>
+	</nav>
+</header>
+
+<h2 id="subtitle">{{ .Title }}</h2>
