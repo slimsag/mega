@@ -1,0 +1,53 @@
+{{template "base/head" .}}
+<div class="repository compare pull">
+	{{template "repo/header" .}}
+	<div class="ui container">
+		<div class="sixteen wide column page grid">
+			<h2 class="ui header">
+			  {{.i18n.Tr "repo.pulls.compare_changes"}}
+			  <div class="sub header">{{.i18n.Tr "repo.pulls.compare_changes_desc"}}</div>
+			</h2>
+			<div class="ui segment choose branch">
+				<span class="octicon octicon-git-compare"></span>
+				<div class="ui floating filter dropdown" data-no-results="{{.i18n.Tr "repo.pulls.no_results"}}">
+					<div class="ui basic small button">
+				    <span class="text">base: {{$.BaseBranch}}</span>
+					  <i class="dropdown icon"></i>
+					</div>
+	        <div class="overflow menu">
+		        <div class="ui icon search input">
+	            <i class="filter icon"></i>
+	            <input name="search" placeholder="Filter branch...">
+	          </div>
+	          <div class="items">
+		        	{{range .Branches}}
+		          <div class="{{if eq $.BaseBranch .}}active selected{{end}} item" data-url="{{$.RepoLink}}/compare/{{.}}...{{$.SignedUser.Name}}:{{$.HeadBranch}}">{{.}}</div>
+		        	{{end}}
+	          </div>
+					</div>
+			 	</div>
+			 	...
+				<div class="ui floating filter dropdown">
+					<div class="ui basic small button">
+				    <span class="text">compare: {{$.HeadBranch}}</span>
+					  <i class="dropdown icon"></i>
+					</div>
+	        <div class="overflow menu">
+		        <div class="ui icon search input">
+	            <i class="filter icon"></i>
+	            <input name="search" placeholder="Filter branch...">
+	          </div>
+	          <div class="items">
+		        	{{range .HeadBranches}}
+		          <div class="{{if eq $.HeadBranch .}}active selected{{end}} item" data-url="{{$.RepoLink}}/compare/{{$.BaseBranch}}...{{$.SignedUser.Name}}:{{.}}">{{.}}</div>
+		        	{{end}}
+	        	</div>
+					</div>
+			 	</div>
+			</div>
+			{{template "repo/issue/new_form" .}}
+		</div>
+
+	</div>
+</div>
+{{template "base/footer" .}}

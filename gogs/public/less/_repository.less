@@ -1,0 +1,721 @@
+.repository {
+	@mega-octicon-width: 30px;
+
+	padding-top: 15px;
+	padding-bottom: @footer-margin * 2;
+
+	.head {
+		.column {
+			padding-top: 5px!important;
+			padding-bottom: 5px!important;
+		}
+		.ui.compact.menu {
+			margin-left: 1rem;
+		}
+		.ui.header {
+			margin-top: 0;
+		}
+		.mega-octicon {
+			width: @mega-octicon-width;
+			font-size: 30px;
+		}
+		.ui.huge.breadcrumb {
+			font-weight: 300;
+			font-size: 1.7rem;
+		}
+		.fork-flag {
+			margin-left: @mega-octicon-width + 8px;
+			display: block;
+			font-size: 11px;
+			line-height: 10px;
+			white-space: nowrap;
+		}
+	}
+
+	.metas {
+		.menu {
+			max-height: 300px;
+	    overflow-x: auto;
+		}
+		.ui.list {
+			.hide {
+				display: none!important;
+			}
+			.label.color {
+				padding: 0 8px;
+				margin-right: 5px;
+			}
+			a {
+				padding-top: 5px;
+				padding-right: 10px;
+				.text {
+					color: #444;
+					&:hover {
+						color: #000;
+					}
+				}
+			}
+		}
+	}
+	.filter.menu {
+		.label.color {
+			margin-left: 15px;
+			padding: 0 8px;
+		}
+		.octicon {
+			float: left;
+			margin-left: -5px;
+			margin-right: -7px;
+		}
+		.menu {
+			max-height: 300px;
+			overflow-x: auto;
+		  right: 0!important;
+  		left: auto!important;
+	 	}
+	 	.dropdown.item {
+	 		margin: 1px;
+	 		padding-right: 0;
+	 	}
+	}
+
+	@comment-avatar-width: 3em;
+	&.new.issue {
+		.comment.form {
+			.comment {
+				.avatar {
+					width: @comment-avatar-width;
+				}
+			}
+			.content {
+				margin-left: 4em;
+				.markdown {
+					font-size: 14px;
+				}
+			}
+			.metas {
+				min-width: 220px;
+				.filter.menu {
+					max-height: 300px;
+					overflow-x: auto;
+				}
+			}
+
+		}
+	}
+	&.view.issue {
+		.title {
+			padding-bottom: 0!important;
+			h1 {
+				font-weight: 300;
+				font-size: 3rem;
+				margin-bottom: 5px;
+				.ui.input	{
+					font-size: 0.5em;    
+					vertical-align: top;
+					width: 50%;
+					min-width: 600px;
+					input {
+						font-size: 1.5em; 
+						padding: 6px 10px;
+					}
+				}
+			}
+			.index {
+				font-weight: 300;
+				color: #aaa;
+				letter-spacing: -1px;
+			}
+			.label {
+				margin-right: 10px;
+			}
+			.edit-zone {
+		    margin-top: 10px;
+			}
+		}
+		.comment-list {
+			&:before {
+				display: block;
+				content: "";
+				position: absolute;
+				margin-top: 12px;
+    		margin-bottom: 14px;
+				top: 0;
+				bottom: 0;
+				left: 96px;
+				width: 2px;
+				background-color: #f3f3f3;
+				z-index: -1;
+			}
+			.comment {
+				.avatar {
+					width: @comment-avatar-width;
+				}
+				.tag {    
+					color: #767676;
+					margin-top: 3px;
+			    padding: 2px 5px;
+			    font-size: 12px;
+			    border: 1px solid rgba(0,0,0,0.1);
+			    border-radius: 3px;
+				}
+				.actions {
+					.item {
+						float: left;
+					}
+					a.item {
+						margin-top: 6px;
+						margin-left: 10px;
+					}
+				}
+				.content {
+					margin-left: 4em;
+					.header {
+						font-weight: normal;
+						padding: auto 15px;
+						color: #767676;
+						background-color: #f7f7f7;
+						border-bottom: 1px solid #eee;
+						border-top-left-radius: 3px;
+						border-top-right-radius: 3px;
+						.text {
+							max-width: 78%;
+					    padding-top: 10px;
+					    padding-bottom: 10px;
+						}
+					}
+					.markdown {
+						font-size: 14px;
+					}
+					.no-content {
+						color: #767676;
+						font-style: italic;
+					}
+					> .bottom.segment {
+						background: #f3f4f5;
+						.ui.image {
+							max-height: 150px;
+						}
+					}
+				}
+
+				.ui.form {
+					.field:first-child {
+						clear: none;
+					}
+					.tab.segment {
+						border: none;
+				    padding: 0;
+				    padding-top: 10px;
+					}
+					textarea {
+						height: 200px;
+					}
+				}
+
+				.edit.buttons {
+					margin-top: 10px;
+				}
+			}
+			.event {
+				position: relative;
+		    margin: 15px 0 15px 79px;
+		    padding-left: 25px;
+		    .octicon {
+		    	width: 30px;
+		    	float: left;
+		    	margin-left: -36px;
+		    	text-align: center;
+		    	&.octicon-circle-slash {
+		    		margin-top: 5px;
+		    		font-size: 20px;
+		    		color: #bd2c00;
+		    	}
+		    	&.octicon-primitive-dot {
+		    		font-size: 35px;
+		    		color: #6cc644;
+		    	}
+		    }
+			}
+		}
+		.ui.segment.metas {
+	    margin-top: -3px;
+		}
+	}
+	.comment.form {
+		.ui.comments {
+			margin-top: -12px;
+			max-width: 100%;
+		}
+		.content {
+			.field:first-child {
+				clear: none;
+			}
+			.tab.segment {
+				border: none;
+		    padding: 0;
+		    padding-top: 10px;
+			}
+			textarea {
+				height: 200px;
+			}
+		}
+	}
+
+	.label.list {
+		list-style: none;
+		padding-top: 15px;
+		.item {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-bottom: 1px dashed #AAA;
+			a {
+				font-size: 15px;
+				padding-top: 5px;
+				padding-right: 10px;
+				color: #666;
+				&:hover {
+					color: #000;
+				}
+				&.open-issues {
+					margin-right: 30px;
+				}
+			}
+		}
+	}
+
+	.milestone.list {
+		list-style: none;
+		padding-top: 15px;
+		> .item {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-bottom: 1px dashed #AAA;
+			> a {
+				padding-top: 5px;
+				padding-right: 10px;
+				color: #000;
+				&:hover {
+					color: #4078c0;
+				}
+			}
+			.ui.progress {
+				width: 40%;
+				padding: 0;
+				border: 0;
+				margin: 0;
+				.bar {
+					height: 20px;
+				}
+			}
+			.meta {
+				color: #999;
+				padding-top: 5px;
+				.issue-stats .octicon{
+					padding-left: 5px;
+				}
+				.overdue {
+					color: red;
+				}
+			}
+			.operate {
+				margin-top: -15px;
+				> a {
+					font-size: 15px;
+					padding-top: 5px;
+					padding-right: 10px;
+					color: #666;
+					&:hover {
+						color: #000;
+					}
+				}
+			}
+			.content {
+				padding-top: 10px;
+			}
+		}
+	}
+	&.new.milestone {
+		textarea {
+			height: 200px;
+		}
+		#deadline {
+			width: 150px;
+		}
+	}
+
+	&.compare.pull {
+		.choose.branch {
+			.octicon {
+				padding-right: 10px;
+			}
+		}
+	}
+
+	.filter.dropdown .menu {
+		margin-top: 1px!important;
+	}
+
+	&.commits {
+		.header {
+			.ui.right {
+				.search {
+					input {
+						font-weight: normal;
+						padding: 5px 10px;
+					}
+				}
+				.button {
+					float: right;
+					margin-left: 5px;
+					margin-top: 1px;
+				}
+			}
+		}
+	}
+	.commits.table {
+		font-size: 13px;
+		th, td {
+			&:first-child {
+				padding-left: 15px;
+			}
+		}
+		td {
+			line-height: 15px;
+		}
+		.author {
+			min-width: 180px;
+		}
+		.message span {
+			max-width: 500px;
+		}
+		.date {
+	    width: 120px;
+		}
+	}
+	.sha.label {
+		font-family: Consolas, Menlo, Monaco, "Lucida Console", monospace;
+		font-size: 14px;
+		padding: 6px 10px 4px 10px;
+		font-weight: normal;
+	}
+
+	.diff-detail-box {
+    margin: 15px 0;
+    line-height: 30px;
+    ol {
+      clear: both;
+      padding-left: 0;
+      margin-top: 5px;
+      margin-bottom: 28px;
+      li {
+        list-style: none;
+        padding-bottom: 4px;
+        margin-bottom: 4px;
+        border-bottom: 1px dashed #DDD;
+        padding-left: 6px;
+      }
+    }
+    span.status{
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin-right: 8px;
+      vertical-align: middle;
+      &.modify {
+        background-color: #f0db88;
+      }
+      &.add {
+        background-color: #b4e2b4;
+      }
+      &.del {
+        background-color: #e9aeae;
+      }
+      &.rename {
+        background-color: #dad8ff;
+      }
+    }
+	}
+	.diff-box {
+    .count {
+      margin-right: 12px;
+      .bar {
+        background-color: #e75316;
+        height: 12px;
+        width: 40px;
+        display: inline-block;
+        margin: 2px 4px 0 4px;
+        vertical-align: text-top;
+        .add {
+          background-color: #77c64a;
+          height: 12px;
+        }
+      }
+    }
+    .file {
+      color: #888;
+    }
+	}
+	.diff-file-box {
+		.header {
+			border-bottom: 1px solid #d4d4d5!important;
+		}
+    .file-body.file-code {
+      .lines-num {
+        text-align: right;
+        color: #999;
+        background: #fafafa;
+        width: 1%;
+      }
+      .lines-num-old {
+        border-right: 1px solid #DDD;
+      }
+    }
+    .code-diff {
+    	font-size: 13px;
+    	td {
+    		padding: 0;
+    		border-top: none;
+    	}
+    	pre {
+    		margin: 0;
+    	}
+    	.lines-num {
+    		border-right: 1px solid #d4d4d5;
+    		padding: 0 5px;
+    	}
+      tbody {
+        tr {
+          &.tag-code {
+            td, pre {
+              background-color: #E0E0E0 !important;
+              border-color: #ADADAD!important;
+            }
+            // td.selected-line, td.selected-line pre {
+            //   background-color: #ffffdd !important;
+            // }
+          }
+          // &.same-code {
+          //   td.selected-line, td.selected-line pre {
+          //     background-color: #ffffdd !important;
+          //   }
+          // }
+          &.del-code {
+            td, pre {
+              background-color: #ffe2dd !important;
+              border-color: #e9aeae !important;
+            }
+            // td.selected-line, td.selected-line pre {
+            //   background-color: #ffffdd !important;
+            // }
+          }
+          &.add-code {
+            td, pre { 
+              background-color: #d1ffd6 !important;
+              border-color: #b4e2b4 !important;
+            }
+            // td.selected-line, td.selected-line pre {
+            //   background-color: #ffffdd !important;
+            // }
+          }
+          &:hover {
+            td {
+              background-color: #FFF8D2 !important;
+              border-color: #F0DB88 !important;   
+            }
+            pre {
+              background-color: transparent !important;
+            }
+          }
+        }
+      }
+    }
+	}
+	.code-view {
+		overflow: auto;
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+}
+
+.issue.list {
+	list-style: none;
+	padding-top: 15px;
+	>.item {
+		padding-top: 15px;
+		padding-bottom: 10px;
+		border-bottom: 1px dashed #AAA;
+		.title {
+			color: #444;
+			font-size: 15px;
+			font-weight: bold;
+			margin: 0 6px;
+			&:hover {
+				color: #000;
+			}
+		}
+		.comment {
+			padding-right: 10px;
+			color: #666;
+		}
+		.desc {
+			padding-top: 5px;
+			color: #999;
+			a.milestone {
+				padding-left: 5px;
+				color: #999!important;
+				&:hover {
+					color: #000!important;
+				}
+			}
+			.assignee {
+				margin-top: -5px;
+				margin-right: 5px;
+			}
+		}
+	}
+}
+
+.page.buttons {
+	padding-top: 15px;
+}
+
+.ui.comments {
+	.dropzone {
+		width: 100%; 
+		margin-bottom: 10px;
+		border: 2px dashed #0087F7;
+		box-shadow: none!important;
+		.dz-error-message {
+			top: 140px;
+		}
+	}
+}
+
+.settings {
+	.content {
+		margin-top: 2px;
+		.header,
+		.segment {
+			box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+		}
+	}
+	.key.list {
+		.item:not(:first-child) {
+			border-top: 1px solid #eaeaea;
+		}
+		.ssh-key-state-indicator {
+			float: left;
+			color: gray;
+			padding-left: 10px;
+	    padding-top: 10px;
+	    &.active {
+	    	color: #6cc644;
+	    }
+		}
+		.meta {
+			padding-top: 5px;
+		}
+		.print {
+			color: #767676;
+		}
+		.activity {
+			color: #666;
+		}
+	}
+	.hook.list {
+		> .item:not(:first-child) {
+			border-top: 1px solid #eaeaea;
+		}
+		.item {
+			padding: 10px 20px;
+			.octicon,
+			.fa {
+				width: 20px;
+				text-align: center;
+			}
+		}
+	}
+	.hook.history.list {
+		.item {
+			padding-left: 13px;
+			.meta {
+				.ui.right {
+					margin-top: 5px;
+					.time {
+						font-size: 12px;
+					}
+				}
+			}
+			.info {
+				margin-top: 10px;
+				.tabular.menu {
+					.item {
+						font-weight: 500;
+					}
+				}
+				.tab.segment {
+					border: none;
+			    padding: 0;
+			    padding-top: 10px;
+			    box-shadow: none;
+			    > * {
+			    	color: #666;
+			    }
+			    pre {
+						word-wrap: break-word;
+						.hljs {
+							padding: 0;
+							background-color: inherit;
+						}
+			    }
+				}
+			}
+		}
+	}
+}
+
+.ui.vertical.menu {
+	.header.item {
+		font-size: 1.1em;
+		background: #f0f0f0;
+	}
+}
+
+.edit-label.modal,
+.new-label.segment {
+	.form {
+		.column {
+			padding-right: 0;
+		}
+		.buttons {
+			margin-left: auto;
+			padding-top: 15px;
+		}
+		.color.picker.column {
+			width: auto;
+			.color-picker {
+				height: 35px;
+				width: auto;
+				padding-left: 30px;
+			}
+		}
+		.minicolors-swatch.minicolors-sprite {
+			top: 10px;
+			left: 10px;
+			width: 15px;
+			height: 15px;
+		}
+		.precolors {
+			padding-left: 0;
+			padding-right: 0;
+			margin: 3px 10px auto 10px;
+			width: 120px;
+			.color {
+				float: left;
+				width: 15px;
+				height: 15px;
+			}
+		}
+	}
+}

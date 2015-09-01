@@ -1,0 +1,26 @@
+<div class="modal fade" tabindex="-1" ng-attr-data-backdrop="{{ close ? true : 'static' }}" ng-attr-data-keyboard="{{ Boolean(close) }}">
+  <!--
+  // Copyright (C) 2014 The Syncthing Authors.
+  //
+  // This Source Code Form is subject to the terms of the Mozilla Public
+  // License, v. 2.0. If a copy of the MPL was not distributed with this file,
+  // You can obtain one at http://mozilla.org/MPL/2.0/.
+  -->
+  <div class="modal-dialog" ng-class="{'modal-lg': large}">
+    <div class="modal-content">
+      <div class="modal-header alert alert-{{status}}">
+        <h4 class="modal-title">
+          <span ng-if="icon" class="fa fa-{{icon}}"></span>
+          {{title}}
+        </h4>
+      </div>
+      <div class="modal-body" ng-transclude>
+      </div>
+      <div ng-if="close" class="modal-footer">
+        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">
+          <span class="fa fa-times"></span>&nbsp;<span translate>Close</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
