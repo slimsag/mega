@@ -1,3 +1,0 @@
-[not_loaded]
-type = "StatFilter"
-message_matcher = "TRUE"

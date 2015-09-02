@@ -1,7 +1,0 @@
-[TestOut]
-type = "LogOutput"
-message_matcher = "TRUE"
-encoder = "%ENV[ spaces arent allowed]"
-
-
-

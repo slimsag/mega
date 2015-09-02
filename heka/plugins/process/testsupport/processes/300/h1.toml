@@ -1,5 +1,0 @@
-[ProcessInput]
-  [ProcessInput.command.0]
-  bin = "echo"
-  args = ["hello world again\n"]
-
