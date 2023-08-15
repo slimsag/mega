@@ -1,0 +1,21 @@
+/*
+ * Copyright 2021 The Chromium Authors
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file.
+ *
+ */
+
+@namespace "http://www.w3.org/1999/xhtml";
+
+/* TODO(crbug.com/681917): This stylesheet is included only if the
+  FormControlsVerticalWritingModeSupport feature is disabled. This keeps
+  form controls from being rendered with a vertical writing mode in that
+  case. */
+input,
+textarea,
+select,
+meter,
+progress,
+button {
+  writing-mode: horizontal-tb !important;
+}
